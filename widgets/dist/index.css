@@ -3,10 +3,15 @@
     src: url('../assets/Digital\ Dismay.otf');
 }
 
+body{
+    background-color: #dfe3e6;
+}
+
+
 .clock {
     font-family: 'digital-clock-font';
     padding: 23px 14px 0 2px;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     border: 4px solid black;
     border-radius: 4px;
     background-image: url("../assets/parisBG.jpg");
@@ -16,4 +21,60 @@
     font-weight: 100;
     color: white;
     background-size: contain;
+}
+
+.header-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-list li{
+    font-family: 'IM Fell French Canon SC', serif;
+    padding: 4px 8px;
+    margin: 5px;
+    background-color: lightgray;
+    border: grey 1px solid;
+    border-radius: 3px;    
+}
+
+.header-list li:hover{
+    cursor: pointer;
+    background-color: rgb(172, 172, 172);
+    transition: 0.25s;
+}
+
+.tabs-div{
+    width: 80%;
+    margin: 20px auto;
+    border: 1px rgb(90, 90, 90) solid;
+    border-radius: 4px;
+    background-color: rgb(235, 235, 235);
+}
+
+.tab-content{
+    width: 100%;
+    margin: auto;
+    /* height: 200px; */
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: 'IM Fell French Canon SC', serif;
+    font-size: 30px;
+}
+
+.header-list li.selected{
+    font-weight: bold;
+}
+
+
+.tabs-title{
+    font-family: 'IM Fell French Canon SC', serif;
+    font-size: 25px;
+    margin: 10px auto;
+    text-align: center;
 }
