@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Clock from './clock.jsx'
 import Tabs from "./tabs.jsx";
+import Weather from "./weather.jsx"
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
@@ -15,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div>
                 <Tabs tabs={tabData}/>
+            </div>
+            <div>
+                <Weather/>
             </div>
         </div>
     )
