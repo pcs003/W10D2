@@ -6,7 +6,15 @@ export default class Weather extends React.Component{
         
         this.loadXMLDoc = this.loadXMLDoc.bind(this)
         
+        this.state = {
+            queryResult: ""
+        }
+    }
 
+    componentDidMount() {
+        this.setState({
+            queryResult: this.loadXMLDoc()
+        })
     }
 
     loadXMLDoc() {
@@ -17,7 +25,7 @@ export default class Weather extends React.Component{
             lon = pos.coords.longitude;
         });
         console.log(lat);
-        var xmlhttp = new XMLHttpRequest();
+        let xmlhttp = new XMLHttpRequest();
         let response = "";
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
@@ -43,7 +51,7 @@ export default class Weather extends React.Component{
         return (
             <div className="weather-div">
                 <h1 className="weather-title">Weather!</h1>
-                <h3>{this.loadXMLDoc()}</h3>
+                <h3>{this.state.result}</h3>
             </div>
         )
     }
